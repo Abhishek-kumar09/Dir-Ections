@@ -20,3 +20,6 @@ python3 DirActions.py
 There is currently delete functionality in this repo but there is many more to come so that you could play with your files.
 If you find any issue, create one so that we could get something to work on :) we are bit lazy and need your help.
 If you want to contribute then you are heartily welcome, just open a pull request and I will be very happy.
+
+**Warning** 
+Curently only delete option is enabled.
