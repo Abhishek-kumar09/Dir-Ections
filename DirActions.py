@@ -1,5 +1,6 @@
 import os
 import shutil
+import time
 
 print ("welcome in File Handling Wizard!!")
 print ("You can delete all the files with the certain extension e.g. .mp4")
@@ -47,8 +48,24 @@ if (type(extension) == str and type(path) == str):
             traversetree(file)
 
 # The affected files
-for file in Files:
-    os.remove(file)    
+if (len(Files) == 0):
+    print (f"There are no such file with {extension} extension!")
+else:
+    print ("You will be permanently deleting these files")
+    time.sleep(1)
+    for file in Files:
+        print (file)
+
+    print ("Are you sure for deleting these | Y or N |")
+    choice = input()
+    if (choice == 'y' or choice == 'Y'):
+        for file in Files:
+            os.remove(file)
+        print("files deleted successfully")
+    else:
+        print("OK!, You chose not to delete these files!...")            
+    
+
 
 if (noSuchDirectory):
     print ("Wrong Path Provided: No such File or Directory!!")
